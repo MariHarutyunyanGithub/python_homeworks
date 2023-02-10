@@ -7,7 +7,13 @@ print('Welcome to the best game in the world\n\n        TIC_TAC_TOE\n')
 # please enter the names
 print('Please, enter player names')
 player1 = input('player1 :  ')
-player2 = input('player2 :  ')
+while True:
+    player2 = input('player2 :  ')
+    if player2 == player1:
+        # names must be different
+        print('The names are same, please enter another name')
+    else:
+        break
 
 # view of the board at the beginning of the game
 board = [[0, 0, 0],
@@ -34,8 +40,10 @@ def play():
             res = start(2)
         # if the winner's name is already known, congratulations!
         if res == player1 or res == player2:
-            print('congratulations!!!!!\n')
-            print('The winner is ' + res.upper())
+            for i in board:
+                print(i)
+            print('\n       congratulations!!!!!\n')
+            print('         The winner is ' + res.upper())
             break
         # if there are no more free cells, the game ends in a draw
         if not free_cell():
