@@ -113,7 +113,7 @@ def choose_cell(player):
             else:
                 break
         except:
-            print("your input for row is not valid, please, input '1', '2' or '3'")
+            print("your input for culomn is not valid, please, input '1', '2' or '3'")
     # if the cell is already corrupted, inform
     if board[row - 1][col - 1] != 0:
         print('that cell is already corrupted, please, choose another cell')
