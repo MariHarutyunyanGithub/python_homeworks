@@ -43,11 +43,13 @@ def play():
             for i in board:
                 print(i)
             print('\n       congratulations!!!!!\n')
-            print('         The winner is ' + res.upper())
+            print('       The winner is ' + res.upper())
             break
         # if there are no more free cells, the game ends in a draw
         if not free_cell():
-            print('the game ended in a tie')
+            for i in board:
+                print(i)
+            print('\nthe game ended in a tie')
             break
     # offer to play again 
     print('\nwould you like to play again?(y/n)\n')
@@ -63,7 +65,7 @@ def play():
             play()
         elif answer.lower() == 'n':
             # otherwise, say goodbye and exit the game
-            print('BYE!!!!!')
+            print('THANK YOU, BYE!!!!!')
             exit()
         else:
             print("your input is not valid, input 'y' or 'n'")
