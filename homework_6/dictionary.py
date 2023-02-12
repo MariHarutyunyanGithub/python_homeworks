@@ -9,4 +9,5 @@ while word != '':
     my_dict[word] = translated_text.text
 
 for key,value in my_dict.items():
-    print(key.strip(), ':', value)
+    print('{:<15}'.format(key.strip()), end = '')
+    print(value)
