@@ -11,6 +11,7 @@ t2 = time.time()
 
 print('for_complexity')
 print(t2 - t1) 
+# prints 6.0851829051971436
 
 a = 0
 # before while
@@ -22,3 +23,4 @@ t2 = time.time()
 
 print('while_complexity')
 print(t2 - t1)
+# prints 6.852759122848511
