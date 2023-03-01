@@ -1,3 +1,11 @@
+# In Python, the for loop is generally faster than the while 
+# loop for iterating over sequences such as lists, tuples, 
+# and strings. This is because Python's for loop is implemented 
+# as an optimized C loop that can quickly and efficiently 
+# iterate over the elements in a sequence, while the while 
+# loop requires more Python bytecode to perform the same task.
+
+
 import time
 
 a = 0
