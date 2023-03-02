@@ -13,9 +13,10 @@ def is_power(n):
     return n > 0 and (bin(n).count('1') == 1) and not((bin(n).count('0') - 1) % 2)
 
 number = input('please enter an integer number: ')
+
+print('\n')
+print(is_power(number))
 if is_power(number):
-    print(is_power(number))
     print(number, ' = pow(4, ', bin(int(number)).count('0')// 2 , ')', sep = '')
 else:
-    print(is_power(number))
     print(number, 'is not a power of 4')
