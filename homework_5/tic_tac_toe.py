@@ -43,7 +43,7 @@ def play():
             for i in board:
                 print(i)
             print('\n       congratulations!!!!!\n')
-            print('       The winner is ' + res.upper())
+            print('       The winner is', res.upper())
             break
         # if there are no more free cells, the game ends in a draw
         if not free_cell():
@@ -72,7 +72,7 @@ def play():
 
 # This function checks the positions, if there is a winning 
 # position, returns the name of the winner
-def checking(player, board):
+def checking(player):
     # check the horizontal positions
     for i in board:
         if (i[0] == i[1] and
@@ -97,7 +97,7 @@ def checking(player, board):
 
 # this function allows players to select a cell
 def choose_cell(player):
-    print('\n' + player + ', your turn, please, choose the cell')
+    print('\n',player, ', your turn, please, choose the cell', sep = '')
     while True:
         try:
             row = int(input('\nrow :     '))
@@ -128,7 +128,7 @@ def choose_cell(player):
         elif player == player2:
             board[row - 1][col - 1] = 2
     # check the positions, if there is a win, return the name of the winner
-    winner = checking(player, board)
+    winner = checking(player)
     return winner
     
 
