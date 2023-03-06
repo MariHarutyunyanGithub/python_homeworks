@@ -60,6 +60,9 @@ for i in range(10):
     for j in range(len(a_list[i])):
         print(a_list[i][j][1:-1])
     answer = input('your choice:  ')
+    while answer not in ('1', '2', '3', '4'):
+        print('your input is not correct, please input \'1\', \'2\', \'3\' or \'4\'')
+        answer = input('your choice:  ')
     # if the answer is correct, points are added
     if answer == right_answer[i]:
         res_points += 1
