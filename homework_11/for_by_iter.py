@@ -7,9 +7,15 @@ def my_for(iterable):
     start = 0
     it = iter(iterable)   
     while start < len(iterable):
-        value = start
-        start = next(it)
+        value = next(it)
+        start += 1
         yield value
 
-ls = [1, 2, 3, 4]
+ls = ['hello', 'world']
+x = iter(my_for(ls))
+
+print(next(x)) # 'hello'
+print(next(x)) # 'world'
+# print(next(x)) # StopIteration
+
 print(list(my_for(ls)))
