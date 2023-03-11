@@ -1,6 +1,9 @@
 # Իրականացնել for օգտագործելով iterator։
 
 def my_for(iterable):
+    if not hasattr(iterable, '__iter__'):
+        print('object is not iterable')
+        raise TypeError
     start = 0
     it = iter(iterable)   
     while start < len(iterable):
