@@ -10,16 +10,16 @@ class myIterable:
 
     def __next__(self):
         if self.index < len(self.iterable):
-            value = self
+            value = self.iterable[self.index]
             self.index +=1
             return value
         else:
             raise StopIteration
     
-    def print(self):
-        print(self.iterable)
-
-m = myIterable((1, 2, 3, 4, 5, "hello"))
-if hasattr(m, '__iter__'):
-    print("it is iterable")
-m.print()
+ls = [1, 2, 3, 'hello']
+x = iter(myIterable(ls))
+print(next(x))
+print(next(x))
+print(next(x))
+print(next(x))
+# print(next(x))
